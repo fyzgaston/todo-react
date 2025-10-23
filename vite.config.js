@@ -8,11 +8,11 @@ export default defineConfig(({mode}) => {
   const isProd = mode === 'production'
 
   return {
-    base: isProd ? '/todo-react' : '/', // если истина, то название репозитория
+    base: isProd ? '/todo-react/' : '/', // если истина, то название репозитория
     plugins: [react(), svgr()],
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     }
   }
